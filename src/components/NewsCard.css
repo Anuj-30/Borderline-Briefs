@@ -1,0 +1,45 @@
+.news-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    transition: transform 0.2s ease;
+  }
+  
+  .news-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .news-title a {
+    font-size: 1.2rem;
+    color: #1c1c1c;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .news-title a:hover {
+    color: #0056b3;
+  }
+  
+  .meta {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #666;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #ff0000;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+  }
+  
