@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()], server: {
     host: true,  // Allows the server to be accessible from any IP address
     allowedHosts: [
-      '7c25-2409-40d1-ad-610c-5c5c-fd81-928d-e8bd.ngrok-free.app', // Add your ngrok URL here
+      '329c-2409-40d1-10c5-c55f-74a1-7feb-625e-8dd8.ngrok-free.app', // Add your ngrok URL here
     ]
   }
 })

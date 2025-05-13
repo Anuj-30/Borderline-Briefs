@@ -1,0 +1,157 @@
+.breaking-card {
+  display: flex;
+  max-width: 800px;
+  margin: 30px auto;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-left: 6px solid crimson;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.breaking-image {
+  width: 180px;
+  height: 150px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-right: 1px solid #eee;
+}
+
+.breaking-content {
+  padding: 16px;
+  flex: 1;
+}
+
+.breaking-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.breaking-title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.breaking-title a:hover {
+  color: crimson;
+}
+
+.breaking-description {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.breaking-footer {
+  font-size: 0.85rem;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.breaking-time {
+  font-weight: 600;
+  color: crimson;
+}
+
+.breaking-source {
+  font-style: italic;
+}
+.breaking-card {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin: 10px auto;
+  max-width: 800px;
+  transition: all 0.3s ease;
+}
+
+.breaking-image {
+  width: 150px;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.breaking-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.breaking-title a {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #111;
+  text-decoration: none;
+}
+
+.breaking-description {
+  margin: 10px 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.breaking-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: auto;
+  align-items: center;
+}
+
+.breaking-time {
+  color: crimson;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.breaking-source {
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* 🔧 Mobile view fix */
+@media (max-width: 600px) {
+  .breaking-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .breaking-image {
+    width: 90%;
+    height: auto;
+    max-height: 180px;
+    margin-bottom: -20px;
+  }
+
+  .breaking-body {
+    width: 100%;
+    align-items: center;
+  }
+
+  .breaking-title a {
+    font-size: 1.1rem;
+  }
+
+  .breaking-footer {
+    flex-direction: column;
+    gap: 5px;
+  }
+}

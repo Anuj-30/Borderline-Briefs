@@ -7,13 +7,15 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-     "start": "react-scripts start",
+    "start": "react-scripts start",
     "preview": "vite preview"
   },
   "dependencies": {
     "ngrok": "^5.0.0-beta.2",
+    "phosphor-react": "^1.4.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-icons": "^5.5.0",
     "xml2js": "^0.6.2"
   },
   "devDependencies": {
@@ -25,6 +27,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
-    "vite": "^6.3.5"
+    "vite": "^6.3.5",
+    "vite-plugin-gh-pages": "^1.0.1"
   }
 }

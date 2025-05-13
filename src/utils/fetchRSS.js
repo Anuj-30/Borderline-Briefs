@@ -1,3 +1,4 @@
+
 const BASE_URL = "https://api.rss2json.com/v1/api.json?rss_url=";
 
 export const fetchRSSFeed = async (rssUrl) => {
@@ -9,23 +10,26 @@ export const fetchRSSFeed = async (rssUrl) => {
 
     return data.items.map(item => {
 
-      console.log('title', item.title);
-      console.log("Raw pubDate:", item.pubDate);  // Log raw pubDate to check the RSS format
-
+      
       // Log UTC and converted times
       const utcDate = new Date(item.pubDate);
-      console.log("utc",utcDate.toString())
-      console.log("UTC Time:", utcDate.toISOString());  // Log the UTC time
-
+     
       const localDate = utcDate.toLocaleString("en-IN", { timeZone: "Asia/Kolkata" });
-      console.log("Converted to IST:", localDate);  // Log the converted IST time
-
+       const image = item.enclosure?.url || item["media:content"]?.url || item.thumbnail || item["media:thumbnail"];
+      console.log(item)
+      function cleanTitle(title) {
+  // This regex matches everything from the start until the last "|" + optional space
+  return title.replace(/^.*\|\s*/, '').trim();
+}
+console.log(cleanTitle(data.feed.title))
       return {
         title: item.title,
         link: item.link,
-        source: data.feed.title,
+
+        source: cleanTitle(data.feed.title),
         description: item.contentSnippet || item.content || "",
         published: item.pubDate,  // Converted to IST
+        thumbnail: image,
         isBreaking: /india|pakistan|border|war|strike|conflict|kashmir/i.test(item.title)
       };
     });
