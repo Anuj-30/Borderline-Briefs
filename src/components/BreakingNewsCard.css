@@ -132,8 +132,11 @@
 /* 🔧 Mobile view fix */
 @media (max-width: 600px) {
   .breaking-card {
+    display: flex;
     flex-direction: column;
     text-align: center;
+    justify-content: center; 
+    align-items: center;
     border: none;
     margin: 28px;
     padding: 14px;
@@ -147,8 +150,8 @@
 
   .breaking-image {
     
-     width: 225px;       /* 100px more than height */
-  height: 120px;
+     width: 350px;       /* 100px more than height */
+  height: 170px;
   object-fit: cover;  /* ensures cropping instead of distortion */
   border-radius: 8px;
     
@@ -171,5 +174,24 @@
     flex-direction: column;
     gap: 5px;
   }
+}
+
+@media (max-width: 430px) {
+
+
+.breaking-image{
+   width: 300px;       /* 100px more than height */
+  height: 170px;
+}
+}
+
+
+@media (max-width: 300px) {
+
+
+.breaking-image{
+   width: 225px;       /* 100px more than height */
+  height: 150px;
+}
 }
 
