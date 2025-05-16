@@ -2,7 +2,7 @@ import React from "react";
 import './NewsCard.css';
 import { ClockCounterClockwise } from 'phosphor-react';
 import { FileText } from 'phosphor-react';
-import fall from '../assets/fall.jpg';
+import fall from '../assets/fall3.png';
 const NewsCard = ({ title, link, description, thumbnail, published, source, breakingTime }) => {
   const current = breakingTime ? new Date(breakingTime) : new Date();
   const publishedTime = new Date(published);
@@ -19,7 +19,7 @@ const NewsCard = ({ title, link, description, thumbnail, published, source, brea
   return (
    <div className="news-card">
   <div className="card-content">
-   <img src={fall} alt="thumbnail" className="thumbnail-img" />
+   <img src={thumbnail || fall} alt="thumbnail" className="thumbnail-img" />
 
     <div className="card-text">
       <h2 className="card-title">

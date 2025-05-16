@@ -21,7 +21,8 @@ export const fetchRSSFeed = async (rssUrl) => {
   // This regex matches everything from the start until the last "|" + optional space
   return title.replace(/^.*\|\s*/, '').trim();
 }
-console.log(cleanTitle(data.feed.title))
+console.log(item.title)
+console.log(image)
       return {
         title: item.title,
         link: item.link,
