@@ -1,29 +1,35 @@
 .main-header {
     background: linear-gradient(135deg, #0a0f24, #1c2742);
+    
     padding: 30px 20px 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
     color: white;
     text-align: center;
-    border-bottom: 4px solid #ffcc00;
-    transform: perspective(800px) rotateX(1deg);
+    
+   
   }
   
   .site-title {
     font-size: 2.5rem;
     font-weight: bold;
-    margin-bottom: 34px;
+    margin-bottom: 14px;
     text-shadow: 0 4px 8px rgba(0,0,0,0.5);
     letter-spacing: 1px;
   }
   
   /*  for desktop */
   .nav-tabs {
-    display: flex;
+     display: flex;
     justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
-    max-width: 800px;
+   background: linear-gradient(135deg, #0a0f24, #1c2742);
+  padding-bottom: 26px;
     margin: 0 auto;
+     border-bottom: 4px solid #ffcc00;
+     position: sticky;
+  top: 0;
+  z-index: 1000;
   }
   
   .nav-tabs button {
@@ -47,19 +53,31 @@
   
   /*  for mobile */
   @media (max-width: 600px) {
+   
     .site-title {
       font-size: 1.7rem;
+       margin-bottom: 20px;
+    padding: 0 10px;
     }
   
     .nav-tabs {
+       position: sticky;
       display: grid;
+      
+  top: 0;
+  z-index: 1000;
       grid-template-columns: repeat(2, 1fr);
       gap: 10px;
-      max-width: 300px;
+     padding: 10px;
     }
   
     .nav-tabs button {
-      width: 100%;
+      font-size: 0.95rem;
+    padding: 10px 16px;
+    min-width: auto;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
     }
   }
   

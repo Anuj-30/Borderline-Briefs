@@ -1,50 +1,94 @@
 .news-card {
   background-color: white;
   border-radius: 12px;
-  margin: 10px auto;
-  padding: 15px 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin: 20px auto;
+  padding: 18px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  max-width: 1000px;
+
   transition: transform 0.2s ease, box-shadow 0.3s ease;
-  max-width: 1180px;
+}
+
+.news-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+}
+
+.thumbnail-img {
+  width: 100px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  margin-right: 16px;
+}
+
+.card-text {
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.news-card:hover {
-  transform: scale(1.01);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-}
-
-.news-card h2 a {
-  color: #1a0dab;
-  font-size: 1.1rem;
+.card-title a {
+  color: black;
   font-weight: 600;
+  font-size: 1rem;
   text-decoration: none;
-  word-break: break-word;
 }
 
-.news-card h2 a:hover {
+.card-title a:hover {
+  color: #1a0dab;
   text-decoration: underline;
 }
 
-.news-card .text-xs {
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
   margin-top: 8px;
-  font-size: 0.85rem;
-  color: #666;
+  color: #555;
 }
 
+.card-meta span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Mobile optimization */
 @media (max-width: 600px) {
   .news-card {
-    padding: 12px;
-    text-align: center;
+    padding: 10px;
+    margin: 10px;
   }
 
-  .news-card h2 a {
-    font-size: 1rem;
+  .card-content {
+    flex-direction: row;
+    align-items: flex-start;
+    
   }
 
-  .news-card .text-xs {
-    font-size: 0.75rem;
+  .thumbnail-img {
+    width: 90px;
+    height: 65px;
+    margin-right: 12px;
+    margin-top: 30px;
   }
+
+  .card-title a {
+    font-size: 0.95rem;
+  }
+
+  .card-meta {
+   flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+  }
+  
 }

@@ -16,7 +16,7 @@ export const fetchRSSFeed = async (rssUrl) => {
      
       const localDate = utcDate.toLocaleString("en-IN", { timeZone: "Asia/Kolkata" });
        const image = item.enclosure?.url || item["media:content"]?.url || item.thumbnail || item["media:thumbnail"];
-      console.log(item)
+      //console.log(item)
       function cleanTitle(title) {
   // This regex matches everything from the start until the last "|" + optional space
   return title.replace(/^.*\|\s*/, '').trim();

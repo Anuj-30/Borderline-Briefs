@@ -6,13 +6,14 @@ import Header from './components/Header';
 import News from './components/news';
 
 function App() {
-  
+  const [navClicked, setNavClicked] = useState(false);
+
   const [count, setCount] = useState(0)
   const [country, setCountry] = useState()
   return (
     <>
-    <Header onCountryChange={setCountry} />
-    <News country={country} />
+    <Header onCountryChange={setCountry} nav={setNavClicked}/>
+    <News country={country} navClicked={navClicked} />
     </>
   )
 }

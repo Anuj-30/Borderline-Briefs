@@ -4,7 +4,7 @@ import { fetchAllFeedsByType } from "../utils/fetchRSS";
 import NewsCard from "../components/NewsCard";
 import BreakingNewsCard from "./BreakingNewsCard";
 
-const Home = ({ country }) => {
+const Home = ({ country,navClicked }) => {
   const [news, setNews] = useState([]);
 const [breakingNews, setBreakingNews] = useState(null);
 
@@ -45,31 +45,25 @@ setBreakingNews(latest);  // 👈 Save it in state
         />
 )}
 <>
-  <hr style={{
-    border: "none",
-    height: "1px",
-    backgroundColor: "#ddd",
-    margin: "30px 0 10px",
-    width: "95%",
-    marginLeft: "auto",
-    marginRight: "auto"
-  }} />
+{navClicked&& 
   <div style={{
-    fontWeight: "1000",
-    fontSize: "17px",
-    fontStyle:'italic',
+    fontWeight: "bolder",
+    fontSize: "27px",
+    fontStyle:'normal',
     marginLeft: "3%",
     marginTop: "0px",
     color: "#333",
     
   }}>
     More to explore
-  </div>
+  </div>}
 </>
 <br></br>
 
 {news.slice(1).map((item, idx) => (
-  <NewsCard key={idx} {...item} breakingTime={breakingNews?.published} />
+<>
+
+  <NewsCard key={idx} {...item} breakingTime={breakingNews?.published} /><br></br></>
 ))}
 
 

@@ -8,7 +8,7 @@ export default defineConfig({
   server: {
     host: true,  // Allows the server to be accessible from any IP address
     allowedHosts: [
-      '329c-2409-40d1-10c5-c55f-74a1-7feb-625e-8dd8.ngrok-free.app', // Add your ngrok URL here
+      '8d5e-2409-40d1-10c5-c55f-8c30-9d26-d5d0-4700.ngrok-free.app', // Add your ngrok URL here
     ]
   }
 })
